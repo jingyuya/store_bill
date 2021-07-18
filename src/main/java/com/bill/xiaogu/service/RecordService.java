@@ -103,12 +103,10 @@ public class RecordService extends ServiceImpl<RecordMapper, Record> {
             throw new ErrorParamException("请填写正确的登记人/操作人信息");
         }
 
-        int sort = RecordSortEnum.getEnum(sortName).code();
-
         record = new Record();
         record.setId(id);
         record.setType(type);
-        record.setSort(sort);
+        record.setSort(sortName);
         record.setPayDesc(desc);
         record.setPayAmount(amount);
         record.setPayTime(payTime);
@@ -118,7 +116,6 @@ public class RecordService extends ServiceImpl<RecordMapper, Record> {
         record.setUpdateTime(LocalDateTime.now());
         record.setAccountId(accountId);
 
-        log.info("record = {}", record);
         return record;
     }
 }

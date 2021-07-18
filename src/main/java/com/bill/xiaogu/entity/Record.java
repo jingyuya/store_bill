@@ -23,8 +23,8 @@ public class Record extends BaseEntity {
     @ApiModelProperty(value = "支付类型：1收入 -1支出")
     private Integer type;
 
-    @ApiModelProperty(value = "支付分类：上月报销 投资款 订单-收款 订单-退款 订单-错单退款 煤气-支出 煤气-收入 房租-支出 房租-收入 店铺-基本支出 店铺-基本收入 店铺-活动支出 进货-支出 进货-退款 提现-美团堂食 提现-美团外卖 提现-饿了么外卖 提现-废品 提现-充电宝 员工-基本支出 员工-工资支出 员工-房租支出 员工-退款收入")
-    private Integer sort;
+    @ApiModelProperty(value = "支付分类")
+    private String sort;
 
     @ApiModelProperty(value = "支付详情说明")
     private String payDesc;
